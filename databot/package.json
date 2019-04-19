@@ -1,0 +1,14 @@
+{
+  "name": "databot",
+  "version": "1.0.0",
+  "description": "Data generator to push to the Qlik streaming orchestrator",
+  "author": "Chris Larsen <chris.larsen@qlik.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "os-utils": "^0.0.14"
+  }
+}

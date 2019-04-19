@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/ec2-user/core-get-started
+ACCEPT_EULA=yes docker-compose up

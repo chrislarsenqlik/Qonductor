@@ -1,0 +1,44 @@
+version: "2"
+services:
+  engine:
+    image: qlikcore/engine:12.345.0
+    restart: always
+    command: -S AcceptEULA=${ACCEPT_EULA}
+    ports:
+      - "19076:9076"
+    volumes: 
+      - ./data:/data
+    networks:
+      - backend
+  inputs:
+    image: node:11
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./inputmgr:/home/node/app
+    ports:
+      - "9090:9090"
+    networks:
+      - backend
+    command: bash -c "npm install && npm start"
+  databot:
+    image: node:11
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./databot:/home/node/app
+    ports:
+      - "9080:9080"
+    links:
+      - inputs
+    networks:
+      - backend
+    command: bash -c "npm install && npm start"
+
+networks:
+  backend:
+    driver: bridge

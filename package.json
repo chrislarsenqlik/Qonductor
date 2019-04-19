@@ -1,0 +1,46 @@
+{
+  "name": "core-get-started",
+  "version": "0.0.1",
+  "description": "Examples on basic usage of QIX Engine running in a Docker container.",
+  "author": "QlikTech International AB",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "hello-engine": "node ./src/hello-engine/hello-engine.js",
+    "hello-data": "node ./src/hello-data/hello-data.js",
+    "hello-data-halyard": "node ./src/hello-data/hello-data-halyard.js",
+    "hello-visualization": "webpack-dev-server --config ./src/hello-visualization/webpack.config.js",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "angular": "1.7.8",
+    "enigma.js": "2.4.0",
+    "halyard.js": "1.3.2",
+    "kafka-node": "^4.1.0",
+    "picasso-plugin-q": "0.21.0",
+    "picasso.js": "0.21.0",
+    "ws": "6.2.1"
+  },
+  "devDependencies": {
+    "@after-work.js/aw": "6.0.3",
+    "@after-work.js/transform": "6.0.3",
+    "@babel/core": "7.4.0",
+    "babel-loader": "8.0.5",
+    "@babel/preset-env": "7.4.2",
+    "babel-plugin-istanbul": "5.1.1",
+    "copy-webpack-plugin": "5.0.2",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "json-loader": "0.5.7",
+    "protractor": "5.4.2",
+    "raw-loader": "2.0.0",
+    "webpack": "4.29.6",
+    "webpack-dev-server": "3.2.1",
+    "webpack-cli": "3.3.0"
+  },
+  "engines": {
+    "node": ">=8.9.3"
+  }
+}
