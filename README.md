@@ -7,7 +7,11 @@ Note that because this also fires up a Qlik Core instance for testing or use oth
 ```sh
 ACCEPT_EULA=yes docker-compose up -d
 ```
-To get this going, get on a linux box with Docker and Docker-Compose installed, git clone this repo, enter the directory, and run "./startenv". This should fire up your environment and you're ready to send data in!
+To get this going, get on a linux box with Docker and Docker-Compose installed, git clone this repo, enter the directory, and run 
+```sh
+./startenv
+```
+This should fire up your environment and you're ready to send data in!
 
 If you're using Kafka, set the topic and any other partition or offset configurations in [inputmgr/server.js](./inputmgr/server.js)
 
