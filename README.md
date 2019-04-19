@@ -1,29 +1,27 @@
-# Get started with Qlik Core
+# Welcome to Qonductor
 
-This repository contains the source code and assets for the Hello Engine, Hello Data, and Hello Visualization examples found [here](https://core.qlik.com/get-started/) under tutorials.
+This repository contains the source code and assets for the Qonductor orchestration environment for loading data into Qlik from arbitrary streaming sources / message busses. The batching of the data is throttled according to a configurations driven by system resources and record volume/velocity and is in turn loaded into Qlik apps incrementally. 
 
-Note that before you deploy, you must accept the [Qlik Core EULA](https://core.qlik.com/eula/) by setting the `ACCEPT_EULA` environment variable.
+Note that because this also fires up a Qlik Core instance for testing or use otherwise, you must accept the [Qlik Core EULA](https://core.qlik.com/eula/) by setting the `ACCEPT_EULA` environment variable.
 
 ```sh
 ACCEPT_EULA=yes docker-compose up -d
 ```
+To get this going, get on a linux box with Docker and Docker-Compose installed, git clone this repo, enter the directory, and run "./startenv". This should fire up your environment and you're ready to send data in!
+
+If you're using Kafka, set the topic and any other partition or offset configurations in [inputmgr/server.js](./inputmgr/server.js)
+
 
 ## Contents
 
-- [hello-engine](./src/hello-engine/) - Hello Engine example source code
-- [hello-data](./src/hello-data/) - Hello Data example source code
-- [hello-visualization](./src/hello-visualization/) - Example source code for a line chart and a scatter plot visualization
-- [test](./test) - Function tests for the examples (bash scripts)
-- [data](./data) - The Movies data, used as user data in the examples
-
-## Screenshot
-
-![screenshot](./src/hello-visualization/resources/hello-viz.png)
+- [inputmgr](./inputmgr/) - The input manager is where the primary code for the orchestration service, in server.js
+- [databot](./databot/) - Databot container / microservice used for sending data into the microbatching/orchestration service
+- [test](./test/) - Function tests for the examples against Qlik Core (bash scripts)
+- [data](./data/) - Data that can be used to load test data into qlik core via examples, 
 
 ## Contributing
 
-We welcome and encourage contributions! Please read [Open Source at Qlik R&D](https://github.com/qlik-oss/open-source)
-for more info on how to get involved.
+Please help make this better! Please feel free to fork/pull and let me know if you have any questions or suggestions!
 
 ## Found a bug?
 
