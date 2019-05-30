@@ -1,8 +1,8 @@
 {
-  "name": "docker_web_app",
-  "version": "1.0.0",
-  "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
+  "name": "Qonductor Inputmgr",
+  "version": "0.0.1",
+  "description": "Qonductor Inputmgr",
+  "author": "Chris Larsen <chris.larsen@qlik.com>",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
