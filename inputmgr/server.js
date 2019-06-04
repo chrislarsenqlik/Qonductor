@@ -88,6 +88,7 @@ if( lastOffsetReloaded==='NaN') {
   lastOffsetReloaded=0;
 }
 
+// Web page to display information stored in the orchestrator
 app.get('/duh', function(req,res) {
   var html='<html><head><title></title></head><body>'
   html+="<div id='whateverdiv'>"+lastOffsetReloaded+"</div>"
