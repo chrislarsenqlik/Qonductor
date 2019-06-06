@@ -29,6 +29,10 @@ Input Manager:
 
 ![Input Manager Overview](readme_img/OrchArch.png)
 
+Orchestrator internal:
+
+![Input Manager Overview](readme_img/OrchInt.png)
+
 ## Contributing
 
 Please help make this better! Please feel free to fork/pull and let me know if you have any questions or suggestions!
