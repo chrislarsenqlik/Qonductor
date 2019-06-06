@@ -25,11 +25,11 @@ If you're using Kafka, set the topic and any other partition or offset configura
 
 ## Architecture Overview
 
-Input Manager: 
+### Input Manager: 
 
 ![Input Manager Overview](readme_img/OrchArch.png)
 
-Orchestrator internal:
+### Orchestrator internal:
 
 ![Input Manager Overview](readme_img/OrchInt.png)
 
