@@ -1,5 +1,7 @@
 # Welcome to Qonductor
 
+This project was created to demonstrate how data can be microbatched from external sources, co-mingled, and loaded into Qlik on an automatically controlled basis. Keeping apps as up-to-date as possible is always a desired requirement for analysts. The risk of executing reloads too frequently is that reloads on top of other reloads can corrupt apps and produce other undesired outcomes. For this reason, an *orchestration service* is required to queue and manage data appropriately in Qlik. 
+
 # Deployment
 
 This repository contains the source code and assets for the Qonductor orchestration environment for loading data into Qlik from arbitrary streaming sources / message busses. The batching of the data is throttled according to a configurations driven by system resources and record volume/velocity and is in turn loaded into Qlik apps incrementally. 
@@ -36,6 +38,24 @@ If you're using Kafka, set the topic and any other partition or offset configura
 ## Orchestrator internal:
 
 ![Input Manager Overview](readme_img/OrchInt.png)
+
+# Future improvements envisioned
+
+* Incremental reloads which handle deletes and updates research using partial "REPLACE" feature.
+
+* Bounce every record to an extension for true realtime (socket.io npm has been successfully leveraged), implement realtime vis in Picasso.js
+
+* Optionally aggregate on-the-fly
+
+* Handle schema issues (synthetic keys, renaming columns as appopriate)
+
+* Generation of primary key by default to enhance update syncs with source
+
+* Bundle rows more efficiently 
+
+* Perhaps use SSE vs inline load
+
+* Related to above - possibly spin up other apps to shard/partition by app and have a higher level app / web ui to visualize/merge/roll up various apps at various grains.. leveraged downstream on central node and then brought back down for comparisons at the edge
 
 # Contributing
 
