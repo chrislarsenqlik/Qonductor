@@ -1,6 +1,10 @@
 # Welcome to Qonductor
 
+# Deployment
+
 This repository contains the source code and assets for the Qonductor orchestration environment for loading data into Qlik from arbitrary streaming sources / message busses. The batching of the data is throttled according to a configurations driven by system resources and record volume/velocity and is in turn loaded into Qlik apps incrementally. 
+
+*Requires Docker and Docker-Compose*
 
 Note that because this also fires up a Qlik Core instance for testing or use otherwise, you must accept the [Qlik Core EULA](https://core.qlik.com/eula/) by setting the `ACCEPT_EULA` environment variable.
 
