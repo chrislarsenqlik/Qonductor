@@ -21,7 +21,13 @@ If you're using Kafka, set the topic and any other partition or offset configura
 - [inputmgr](./inputmgr/) - The input manager is where the primary code for the orchestration service, in server.js
 - [databot](./databot/) - Databot container / microservice used for sending data into the microbatching/orchestration service
 - [test](./test/) - Function tests for the examples against Qlik Core (bash scripts)
-- [data](./data/) - Data that can be used to load test data into qlik core via examples, 
+- [data](./data/) - Data that can be used to load test data into qlik core via examples
+
+## Architecture Overview
+
+Input Manager: 
+
+![Input Manager Overview](readme_img/OrchArch.png)
 
 ## Contributing
 
